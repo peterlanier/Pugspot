@@ -63,6 +63,11 @@
  * unless you know what you're doing!
  */
 
+ /* Pugspot Vars */
+ {% set bg_footer_color = "#252525" %}
+ {% set bg_sub_footer_color = "#181818" %}
+
+
 /* ==========================================================================
    Gradient variables
    ========================================================================== */
@@ -2735,17 +2740,16 @@ html body .recaptchatable a:hover {
 
 .social-icons .fm_button {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: 0 6px 6px 0;
-    background-color: transparent !important;
-    box-shadow: 0 0 0 2px {{ theme_color }} inset;
+    background-color: #51545D !important;
     {{ radius(corners, '0', '4px', '100%') }}
-    color: {{ theme_color }} !important;
+    color: white !important;
     text-align: center;
     transition: .4s;
-    font-size: 22px;
-    line-height: 60px;
+    font-size: 11px;
+    line-height: 30px;
 }
 
 .social-icons .fm_button:last-child {
@@ -2759,8 +2763,9 @@ html body .recaptchatable a:hover {
 }
 
 .social-icons .fm_button:hover {
-    background-color: {{ theme_color }} !important;
+    background-color: transparent !important;
     color: #fff !important;
+    box-shadow: 0 0 0 2px #fff inset;
 }
 
 .white-content .social-icons .fm_button:hover,
@@ -3250,6 +3255,14 @@ html body .recaptchatable a:hover {
 
 .bg-dark {
     background-color: {{ dark_color }} !important;
+}
+
+.bg-footer {
+    background-color: {{bg_footer_color}} !important;
+}
+
+.bg-sub-footer {
+    background-color: {{bg_sub_footer_color}} !important;
 }
 
 .bg-light {
@@ -5385,6 +5398,11 @@ html body .recaptchatable a:hover {
     color: {{ dark_color }};
 }
 
+.bg-footer .sub-menu a {
+    color: #8F8F8F;
+}
+
+
 .white-content .sub-menu a,
 .white-content.sub-menu a {
     color: #fff;
@@ -7207,7 +7225,6 @@ html body .recaptchatable a:hover {
 
 .pricing-table-details ul li {
     padding: 5px 0 !important;
-    border-top: 1px solid {{ light_color }};
     text-indent: 0 !important;
 }
 
