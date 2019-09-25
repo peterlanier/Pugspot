@@ -16,8 +16,8 @@
 {% set dark_color = "#333c4e" %}
 {% set light_color = "#f0f7f9" %}
 
-{% set text_color = "#a4abae" %}
-{% set heading_color = dark_color %}
+{% set text_color = "#202020" %}
+{% set heading_color = "#202020" %}
 
 {% set link_color = theme_color %}
 {% set link_hover_color = dark_color %}
@@ -37,7 +37,7 @@
 {% set button_color_2 = dark_color %}
 
 {% set text_font_type = "google" %}
-{% set text_font_family = "Montserrat, sans-serif" %}
+{% set text_font_family = "Open Sans, sans-serif" %}
 {% set text_font_size = "100%" %}
 {% set text_line_height = "1.7" %}
 {% set text_light_variant = "300" %}
@@ -46,7 +46,7 @@
 {% set text_font_weight = text_normal_variant %}
 
 {% set heading_font_type = "google" %}
-{% set heading_font_family = "Montserrat, sans-serif" %}
+{% set heading_font_family = "Open Sans, sans-serif" %}
 {% set heading_font_size = 0 %}
 {% set heading_light_variant = "300" %}
 {% set heading_normal_variant = "500" %}
@@ -63,9 +63,15 @@
  * unless you know what you're doing!
  */
 
- /* Pugspot Vars */
- {% set bg_footer_color = "#252525" %}
- {% set bg_sub_footer_color = "#181818" %}
+/* Pugspot Vars */
+{% set bg_footer_color = "#252525" %}
+{% set bg_sub_footer_color = "#181818" %}
+{% set footer_color = "#8F8F8F" %}
+{% set green = "#67D194" %}
+{% set purple = theme_color %}
+{% set orange = "#FFA127" %}
+{% set bg_partner_gray = "#F2F4F7" %}
+
 
 
 /* ==========================================================================
@@ -5399,9 +5405,8 @@ html body .recaptchatable a:hover {
 }
 
 .bg-footer .sub-menu a {
-    color: #8F8F8F;
+    color: {{ footer_color }};
 }
-
 
 .white-content .sub-menu a,
 .white-content.sub-menu a {
@@ -13058,3 +13063,82 @@ img.img-circle,
 {{ helper_classes(media_sm, 'sm-', corners) }}
 {{ helper_classes(media_xs, 'xs-', corners) }}
 
+/* Pugspot General */
+.green {
+    color: {{green}} !important;
+}
+ 
+.purple {
+    color: {{purple}} !important;
+}
+
+.orange {
+    color: {{orange}} !important;
+}
+
+.bg-green {
+    background-color: {{green}} !important;
+}
+ 
+.bg-purple {
+    background-color: {{purple}} !important;
+}
+
+.bg-orange {
+    background-color: {{orange}} !important;
+}
+
+.bg-partner-gray {
+    background-color: {{bg_partner_gray}} !important;
+}
+
+.button.nav-cta{
+    background: white;
+    color: {{purple}} !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* Pugspot Homepage */
+
+
+/* Pugspot Pricing */
+.bg-image-pricing {
+    background-image: url('https://www.storagepug.com/hubfs/50-Beautiful-and-Minimalist-Presentation-Backgrounds-025.jpg');
+    background-size: cover;
+    background-position: 0 250px;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+.pricing-content {
+    padding-bottom: 0px;
+}
+
+.pricing-y {
+    color: #333c4e;
+    font-weight: 400;
+}
+
+.pricing-table-details ul li.pricing-y::before,
+.pricing-table-details ul li.pricing-n::before {
+    display: inline-block !important;
+}
+
+.pricing-y::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00c" !important;
+    color: {{purple}};
+}
+
+.pricing-n {
+    color: #a4abae;
+}
+
+.pricing-table-details ul li.pricing-n::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00d" !important;
+    color: #a4abae;
+}
+
+.pricing-table-features {
+    text-align: left;
+    padding-left: 20%;
+}
