@@ -2746,8 +2746,8 @@ html body .recaptchatable a:hover {
 
 .social-icons .fm_button {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     margin: 0 6px 6px 0;
     background-color: #51545D !important;
     {{ radius(corners, '0', '4px', '100%') }}
@@ -2755,7 +2755,7 @@ html body .recaptchatable a:hover {
     text-align: center;
     transition: .4s;
     font-size: 11px;
-    line-height: 30px;
+    line-height: 24px;
 }
 
 .social-icons .fm_button:last-child {
@@ -13154,13 +13154,13 @@ img.img-circle,
 
 
 /* Pugspot Pricing */
-.bg-image-pricing {
+/* .bg-image-pricing {
     background-image: url('https://www.storagepug.com/hubfs/50-Beautiful-and-Minimalist-Presentation-Backgrounds-025.jpg');
     background-size: cover;
     background-position: 0 250px;
     background-repeat: no-repeat;
     padding-bottom: 100px;
-}
+} */
 
 .pricing-content {
     padding-bottom: 0px;
