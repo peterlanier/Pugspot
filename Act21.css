@@ -69,7 +69,7 @@
 {% set footer_color = "#8F8F8F" %}
 {% set green = "#67D194" %}
 {% set purple = theme_color %}
-{% set orange = "#FFA127" %}
+{% set orange = "#FFA226" %}
 {% set bg_partner_gray = "#F2F4F7" %}
 
 
@@ -13063,7 +13063,12 @@ img.img-circle,
 {{ helper_classes(media_sm, 'sm-', corners) }}
 {{ helper_classes(media_xs, 'xs-', corners) }}
 
-/* Pugspot General */
+/***********/
+/* Pugspot */
+/***********/
+
+/* Pugspot Globals */
+
 .green {
     color: {{green}} !important;
 }
@@ -13092,11 +13097,58 @@ img.img-circle,
     background-color: {{bg_partner_gray}} !important;
 }
 
-.button.nav-cta{
+.shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.content-card {
+    border-radius: 0px;
+}
+
+.funyl-radius {
+    border-radius: 10px;
+}
+
+/* Pugspot Header */
+.menu-bar .hs-menu-wrapper>ul>li>a {
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.button.nav-cta {
     background: white;
     color: {{purple}} !important;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
+/* Pugspot Footer */
+.pugspot-footer .menu-heading{
+    font-size: 18px !important;
+}
+
+.pugspot-footer .sub-menu {
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 0.8
+}
+
+.pugspot-sub-footer {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8c8c8c;
+}
+
+/* Pugspot Form */
+.hs-input:not([type="radio"]):not([type="checkbox"]) {
+    background: #F5F7F9;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.hs-form-required {
+    display: none;
+}
+
 
 /* Pugspot Homepage */
 
