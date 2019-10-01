@@ -5724,7 +5724,7 @@ html body .recaptchatable a:hover {
 {% endif %}
 
 .section-intro p {
-    font-size: 1.5rem;
+    font-size: 18px;
     line-height: 1.5;
     font-weight: {{ text_light_variant }};
 }
@@ -7180,16 +7180,6 @@ html body .recaptchatable a:hover {
 .pricing-table.popular .pricing-table-price {
     font-size: 3.25rem;
     font-weight: {{ text_bold_variant }};
-}
-
-.pricing-sign,
-.pricing-freq {
-    font-size: 0.5em;
-    font-weight: 400;
-}
-
-.pricing-sign {
-    vertical-align: super;
 }
 
 /* Per
@@ -13097,6 +13087,11 @@ img.img-circle,
     background-color: {{bg_partner_gray}} !important;
 }
 
+/* For pricing page, consider generalizing as you encounter more */
+h1 {
+    font-size: 42px;
+}
+
 .shadow {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -13106,7 +13101,7 @@ img.img-circle,
 }
 
 .funyl-radius {
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 /* Pugspot Header */
@@ -13151,24 +13146,51 @@ img.img-circle,
 
 
 /* Pugspot Homepage */
+.testimonial {
+    border-radius: 10px;
+}
 
+.testimonial p {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.hs-content-id-14111154634 h2 {
+    font-size: 36px;
+}
 
 /* Pugspot Pricing */
-/* .bg-image-pricing {
-    background-image: url('https://www.storagepug.com/hubfs/50-Beautiful-and-Minimalist-Presentation-Backgrounds-025.jpg');
+.bg-image-pricing {
+    background-image: url('https://www.storagepug.com/hubfs/img-homepage-glow-texture-5.gif');
     background-size: cover;
     background-position: 0 250px;
     background-repeat: no-repeat;
     padding-bottom: 100px;
-} */
-
-.pricing-content {
-    padding-bottom: 0px;
 }
 
-.pricing-y {
-    color: #333c4e;
-    font-weight: 400;
+.pricing-content h4 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.pricing-sign,
+.pricing-freq {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pricing-sign {
+    vertical-align: super;
+}
+
+.pricing-price {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.pricing-table .button {
+    width: 239px;
+    text-transform: none;
 }
 
 .pricing-table-details ul li.pricing-y::before,
@@ -13176,21 +13198,112 @@ img.img-circle,
     display: inline-block !important;
 }
 
+.pricing-y {
+    color: #333c4e;
+    font-weight: 400;
+}
+
 .pricing-y::before{
-    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00c" !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c" !important;
     color: {{purple}};
+    font-size: 11px;
+}
+
+.pricing-table-details ul li.pricing-n::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d  " !important;
+    color: #a4abae;
+    font-size: 11px;
 }
 
 .pricing-n {
     color: #a4abae;
 }
 
-.pricing-table-details ul li.pricing-n::before {
-    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00d" !important;
-    color: #a4abae;
+.pricing-table.popular{
+    z-index: 100;
 }
 
 .pricing-table-features {
     text-align: left;
     padding-left: 20%;
+}
+
+.pricing-table-features ul {
+    list-style-type: none;
+}
+
+.pricing-table {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+}
+
+.pricing-table.popular {
+    z-index: 3;
+}
+
+/* SVG classes */
+.svg-stage {
+    position: relative;
+    z-index: 1;
+}
+
+.svg-top-right img {
+    position: absolute;
+    top: 14px;
+    right: -9px;
+}
+
+.svg-bottom-right img {
+    position: absolute;
+    bottom: -2px;
+    right: -19px;
+}
+
+.svg-top-left img {
+    position: absolute;
+    top: -20px;
+    left: 70px;
+}
+
+.svg-bottom-left img {
+    position: absolute;
+    bottom: -20px;
+    left: 70px;
+}
+
+.svg-back img {
+    z-index: -1
+}
+
+.svg-transform-x img{
+    transform: scaleX(-1);
+}
+
+.svg-transform-y img{
+    transform: scaleY(-1);
+}
+
+.svg-blog-1 {
+    position: absolute;
+    top: -29px;
+    right: -24px;
+}
+
+.svg-blog-2 {
+    position: absolute;
+    bottom: -81px;
+    left: -79px;
+}
+
+.hero-play {
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: white;
+    color: black;
+    font-weight: bold;
 }

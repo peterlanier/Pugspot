@@ -1,0 +1,17 @@
+<div class="bg-partner-gray">
+  <div class="centered plr0 md-plr30">
+    <div class="all-inline tj md-tc">
+      {% for item in module.logo %}
+      {% if item.src %}
+      {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}"' %}
+      {% if item.size_type == 'auto' %}
+      {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+      {% elif item.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ item.max_width }}px; max-height: {{ item.max_height }}px"' %}
+      {% endif %}
+      <img src="{{ item.src }}" alt="{{ item.alt }}" {{ sizeAttrs }}>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
