@@ -13146,6 +13146,14 @@ h1 {
 
 
 /* Pugspot Homepage */
+.hero-play {
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
 .testimonial {
     border-radius: 10px;
 }
@@ -13246,10 +13254,32 @@ h1 {
     z-index: 3;
 }
 
+/* Pugspot Features */
+.feature-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+}
+
+/* Pugspot About */
+
+.about-career-section h2 {
+    margin-bottom: 10px;
+}
+
 /* SVG classes */
 .svg-stage {
     position: relative;
     z-index: 1;
+}
+
+.svg-front img {
+    z-index: 2;
 }
 
 .svg-top-right img {
@@ -13288,6 +13318,10 @@ h1 {
     transform: scaleY(-1);
 }
 
+.svg-transform-xy img {
+    transform: scale(-1);
+}
+
 .svg-blog-1 {
     position: absolute;
     top: -29px;
@@ -13300,10 +13334,8 @@ h1 {
     left: -79px;
 }
 
-.hero-play {
-    padding: 10px 15px;
-    border-radius: 30px;
-    background: white;
-    color: black;
-    font-weight: bold;
+.svg-features-1 img {
+    position: absolute;
+    top: -26px;
+    left: 14px;
 }

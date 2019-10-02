@@ -1,0 +1,77 @@
+<div style="" id="{{name}}" class="bbs-counter-container {{name}}" data-name="{{name}}" data-ran="false">
+        {% for item in module.statistic_bucket %}
+        <div style="text-align: {{module.text_alignment}}" class="bbs-counter-bucket">
+          <h1 class="bbs-count green" style="font-size:90px;font-weight:600;text-align:center;">{{ item.statistic_number }}</h1>
+          <div class="bbs-counter-title">{{ item.title_text }}</div>
+          <div class="bbs-counter-description">{{ item.descriptor_text }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      {% require_css %}
+      <style>
+        .{{name}} .bbs-counter-text * {
+          color: {{ module.descriptor_text_color.color }};
+        }
+        .{{name}} .bbs-count {
+          color: {{ module.number_color.color }};
+        }
+      </style>
+      {% end_require_css %}
+
+
+
+
+
+      .bbs-counter-title,
+.bbs-counter-description {
+  color: #252525;
+}
+
+.bbs-counter-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 8%;
+}
+
+@media(max-width: 767px) {
+  .bbs-counter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bbs-counter-bucket * {
+    text-align: center;
+  }
+}
+
+
+
+
+
+let modules = document.getElementsByClassName('bbs-counter-container');
+for (let i = 0; i < modules.length; i++) {
+  let name = modules[i].dataset.name;
+  $(window).scroll(function() {
+    let windowScroll = $(this).scrollTop();
+    let offsetTop = $('#' + name).offset().top;
+    let windowHeight = $(window).height();
+    console.log(windowScroll);
+    console.log('offsetTop-windowHeight: ' + (offsetTop-windowHeight));
+    if (windowScroll > (offsetTop - windowHeight) && modules[i].dataset.ran === 'false') {
+      modules[i].dataset.ran = 'true';
+      $('#' + name + ' .bbs-count').each(function () {
+        console.log($(this));
+        $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 4000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+      });
+
+    }
+  });
+}
