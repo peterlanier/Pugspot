@@ -1,0 +1,207 @@
+<div
+  class="slider-container autoplay dots dots-below infinite slides-to-show-2 pause-on-hover equal-height"
+>
+  {% for item in module.testimonial %}
+
+  <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+    <div class="row-fluid ">
+      <div
+        class="span12 widget-span widget-type-cell testimonial sm-stack plr50 pt50 pb30 funyl-radius bg-white w550 md-w400 mb50"
+        style=""
+        data-widget-type="cell"
+        data-x="0"
+        data-w="12"
+      >
+        <div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+          <div class="row-fluid ">
+            <div
+              class="span12 widget-span widget-type-rich_text md-mlra ptb0 mtb0"
+              style=""
+              data-widget-type="cell"
+              data-x="0"
+              data-w="12"
+            >
+              <div class="cell-wrapper layout-widget-wrapper">
+                <span
+                  id="hs_cos_wrapper_module_1569427120597488"
+                  class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+                  style=""
+                  data-hs-cos-general-type="widget"
+                  data-hs-cos-type="rich_text"
+                  ><h4 style="font-size: 16px; color:{{ item.color.color }}">
+                    {{ item.title }}
+                  </h4></span
+                >
+              </div>
+              <!--end layout-widget-wrapper -->
+            </div>
+            <!--end widget-span -->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end row-wrapper -->
+
+        <div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+          <div class="row-fluid ">
+            <!-- <div
+            class="span12 widget-span widget-type-rich_text md-mlra pt18 pb15 mtb0"
+            style=""
+            data-widget-type="rich_text"
+            data-x="0"
+            data-w="12"
+          >
+            <div class="cell-wrapper layout-widget-wrapper">
+              <span
+                id="hs_cos_wrapper_module_1569529447346429"
+                class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+                style=""
+                data-hs-cos-general-type="widget"
+                data-hs-cos-type="rich_text"
+                ><p style="font-size: 18px;">
+                  <span
+                    >"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla ac neque feugiat, accumsan ipsum ac, sodales nunc.
+                    Cras consequat, sapien ut blandit pharetra, nunc elit mollis
+                    lacus, ac sagittis purus nulla non turpis."</span
+                  >
+                </p></span
+              >
+            </div>
+
+          </div> -->
+
+            {{ item.description }}
+            <!--end widget-span -->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end row-wrapper -->
+
+        <div class="row-fluid-wrapper row-depth-2 row-number-3 ">
+          <div class="row-fluid ">
+            <div
+              class="span12 widget-span widget-type-rich_text md-mlra pt0 pb20 mtb0"
+              style=""
+              data-widget-type="cell"
+              data-x="0"
+              data-w="12"
+            >
+              <div class="cell-wrapper layout-widget-wrapper">
+                <span
+                  id="hs_cos_wrapper_module_1569529505485468"
+                  class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+                  style=""
+                  data-hs-cos-general-type="widget"
+                  data-hs-cos-type="rich_text"
+                  ><a
+                    href="/testimonials#{{ item.anchor_id }}"
+                    class="purple"
+                    style="font-size: 12px;"
+                  >
+                    READ FULL STORY →
+                  </a></span
+                >
+              </div>
+              <!--end layout-widget-wrapper -->
+            </div>
+            <!--end widget-span -->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end row-wrapper -->
+
+        {% if item.image.src %}
+        <div class="row-fluid-wrapper row-depth-2 row-number-4 ">
+          <div class="row-fluid ">
+            <div
+              class="span12 widget-span widget-type-custom_widget "
+              style=""
+              data-widget-type="cell"
+              data-x="0"
+              data-w="12"
+            >
+              <div
+                id="hs_cos_wrapper_module_1569427120597489"
+                class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image widget-type-linked_image"
+                style=""
+                data-hs-cos-general-type="widget"
+                data-hs-cos-type="module"
+              >
+                {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{
+                  item.image.height
+                }}"' %} {% if item.image.size_type == 'auto' %} {% set sizeAttrs
+                = 'style="max-width: 100%; height: auto; border-radius:10px;"'
+                %} {% elif item.image.size_type == 'auto_custom_max' %} {% set
+                sizeAttrs = 'width="100%" height="auto" style="max-width:
+                {{ item.image.max_width }}px; max-height:
+                {{ item.image.max_height }}px; border-radius:10px;"' %} {% endif
+                %}
+                <img
+                  src="{{ item.image.src }}"
+                  alt="{{ item.image.alt }}"
+                  {{
+                  sizeAttrs
+                  }}
+                />
+                <!-- {% image "testimonial" label='Executive photo', alt='Photo of Brian Halligan', src={{ item.image.src }}, width={{ item.image.width }} %} -->
+                <!-- <span
+                id="hs_cos_wrapper_module_1569427120597489_"
+                class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image"
+                style=""
+                data-hs-cos-general-type="widget"
+                data-hs-cos-type="linked_image"
+                ><img
+                  src="https://www.storagepug.com/hs-fs/hubfs/download.jpg?width=50&amp;height=50&amp;name=download.jpg"
+                  class="hs-image-widget "
+                  width="50"
+                  height="50"
+                  alt="download"
+                  title="download"
+              /></span> -->
+              </div>
+            </div>
+            <!--end widget-span -->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end row-wrapper -->
+        {% endif %}
+
+        <div class="row-fluid-wrapper row-depth-2 row-number-5 ">
+          <div class="row-fluid ">
+            <div
+              class="span12 widget-span widget-type-custom_widget pt5"
+              style="line-height: 20px;"
+              data-widget-type="cell"
+              data-x="0"
+              data-w="12"
+            >
+              <div
+                id="hs_cos_wrapper_module_1569427120597490"
+                class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text"
+                style=""
+                data-hs-cos-general-type="widget"
+                data-hs-cos-type="module"
+              >
+                <span
+                  id="hs_cos_wrapper_module_1569427120597490_"
+                  class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+                  style=""
+                  data-hs-cos-general-type="widget"
+                  data-hs-cos-type="rich_text"
+                  ><strong>{{ item.the_name }}</strong
+                  ><br /><em>{{ item.position }}</em></span
+                >
+              </div>
+            </div>
+            <!--end widget-span -->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end row-wrapper -->
+      </div>
+      <!--end widget-span -->
+    </div>
+  </div>
+  {% endfor %}
+</div>

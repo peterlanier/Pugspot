@@ -1,112 +1,107 @@
 <div class="centered w800">
-  <div class="vcenter-inner">
-    <div class="centered sm-stack md-tc equal-height">
-      {% for item in module.department %} {% for item2 in item.department_label
-      %}
-      <h4 class="tc" style="font-size:24px">
-        {% inline_text field="department_label" value="{{ item2 }}" %}
-      </h4>
-      {% endfor %} {% for item2 in item.career %}
-
-      <div class="row-fluid-wrapper row-depth-2 row-number-1 ">
-        <div class="row-fluid ">
-          <div
-            class="span12 widget-span widget-type-cell sm-stack content-card p20 mb10 career-card"
-            style=""
-            data-widget-type="cell"
-            data-x="0"
-            data-w="12"
-          >
-            <div class="row-fluid-wrapper row-depth-2 row-number-2 ">
-              <div class="row-fluid ">
-                <div
-                  class="span12 widget-span widget-type-rich_text md-w300 md-mlra"
-                  style=""
-                  data-widget-type="rich_text"
-                  data-x="0"
-                  data-w="12"
-                >
-                  <div class="cell-wrapper layout-widget-wrapper">
-                    <span
-                      id="hs_cos_wrapper_module_156944094438607"
-                      class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
-                      style="width:100%;"
-                      data-hs-cos-general-type="widget"
-                      data-hs-cos-type="rich_text"
-                      ><strong
-                        >{{ item2.position }}&nbsp;({{
-                          item2.employment_type
-                        }})</strong
-                      >
-                      | {{item2.location}} →</span
+        <div class=" sm-stack md-tc equal-height pb40">
+          {% for item in module.department %} {% unless loop.first %}<div class="ptb20"></div>{% endunless %}{% for item2 in item.department_label
+          %}
+          
+          <h4 class="tc" style="font-size:24px">{{ item2 }}</h4>
+          {% endfor %}
+          {% for item2 in item.career %}
+          <div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+            <div class="row-fluid ">
+              <div
+                class="span12 widget-span widget-type-cell sm-stack content-card plr30 ptb40 mb10 career-card"
+                style="border-radius:12px;"
+                data-widget-type="cell"
+                data-x="0"
+                data-w="12"
+              >
+                <div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+                  <div class="row-fluid ">
+                    <div
+                      class="span12 widget-span widget-type-rich_text md-w300 md-mlra"
+                      style=""
+                      data-widget-type="rich_text"
+                      data-x="0"
+                      data-w="12"
                     >
-                  </div>
-                  <!--end layout-widget-wrapper -->
-                </div>
-                <!--end widget-span -->
-              </div>
-              <!--end row-->
-            </div>
-            <!--end row-wrapper -->
-
-            <div class="row-fluid-wrapper row-depth-2 row-number-3 ">
-              <div class="row-fluid ">
-                <div
-                  class="span12 widget-span widget-type-custom_widget content-card-link"
-                  style=""
-                  data-widget-type="custom_widget"
-                  data-x="0"
-                  data-w="12"
-                >
-                  <div
-                    id="hs_cos_wrapper_module_157004398919600"
-                    class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module"
-                    style=""
-                    data-hs-cos-general-type="widget"
-                    data-hs-cos-type="module"
-                  >
-                    <div id="module_157004398919600" class=" simple-link">
-                      <a
-                        href="{{ item2.url.href }}"
-                        class=""
-                        title=""
-                        target="_blank"
-                        >Getting Started</a
-                      >
+                      <div class="cell-wrapper layout-widget-wrapper">
+                        <span
+                          class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+                          style="font-size:20px;"
+                          data-hs-cos-general-type="widget"
+                          ><strong
+                            >{{ item2.position }}&nbsp;({{
+                              item2.employment_type
+                            }})</strong
+                          >
+                          | {{item2.location}} →</span
+                        >
+                      </div>
+                      <!--end layout-widget-wrapper -->
                     </div>
-
-                    <style>
-                      .hs-inline-edit
-                        .content-card:hover
-                        .content-card-link
-                        .hs_cos_wrapper[data-hs-overrideable="true"]
-                        #module_157004398919600
-                        a {
-                        position: relative !important;
-                        height: 40px;
-                        background-color: white;
-                        color: blue;
-                        font-size: 0.875rem;
-                        line-height: 2.8571;
-                        font-weight: bold;
-                        opacity: 1;
-                      }
-                    </style>
+                    <!--end widget-span -->
                   </div>
+                  <!--end row-->
                 </div>
-                <!--end widget-span -->
+                <!--end row-wrapper -->
+    
+                <div class="row-fluid-wrapper row-depth-2 row-number-3 ">
+                  <div class="row-fluid ">
+                    <div
+                      class="span12 widget-span widget-type-custom_widget content-card-link"
+                      style=""
+                      data-widget-type="custom_widget"
+                      data-x="0"
+                      data-w="12"
+                    >
+                      <div
+                        class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module"
+                        style=""
+                        data-hs-cos-general-type="widget"
+                        data-hs-cos-type="module"
+                      >
+                        <div class=" simple-link">
+                          <a
+                            href="{{ item2.url.href }}"
+                            class=""
+                            title=""
+                            target="_blank"
+                            >Getting Started</a
+                          >
+                        </div>
+    
+                        <style>
+                          .hs-inline-edit
+                            .content-card:hover
+                            .content-card-link
+                            .hs_cos_wrapper[data-hs-overrideable="true"]
+                            #module_157004398919600
+                            a {
+                            position: relative !important;
+                            height: 40px;
+                            background-color: white;
+                            color: blue;
+                            font-size: 0.875rem;
+                            line-height: 2.8571;
+                            font-weight: bold;
+                            opacity: 1;
+                          }
+                        </style>
+                      </div>
+                    </div>
+                    <!--end widget-span -->
+                  </div>
+                  <!--end row-->
+                </div>
+                <!--end row-wrapper -->
               </div>
-              <!--end row-->
+              <!--end widget-span -->
             </div>
-            <!--end row-wrapper -->
+            <!--end row-->
           </div>
-          <!--end widget-span -->
+          <!--end row-wrapper -->
+    
+          {% endfor %} {% endfor %}
         </div>
-        <!--end row-->
-      </div>
-      <!--end row-wrapper -->
-
-      {% endfor %} {% endfor %}
     </div>
-  </div>
-</div>
+    
