@@ -71,6 +71,7 @@
 {% set purple = theme_color %}
 {% set orange = "#FFA226" %}
 {% set bg_partner_gray = "#F2F4F7" %}
+{% set blue = "#5868db" %}
 
 
 
@@ -13058,17 +13059,24 @@ img.img-circle,
 /***********/
 
 /* Pugspot Globals */
-
+.green h4,
 .green {
     color: {{green}} !important;
 }
- 
+
+.purple h4,
 .purple {
     color: {{purple}} !important;
 }
 
+.orange h4,
 .orange {
     color: {{orange}} !important;
+}
+
+.blue h4,
+.blue {
+    color: {{blue}} !important;
 }
 
 .bg-green {
@@ -13085,6 +13093,10 @@ img.img-circle,
 
 .bg-partner-gray {
     background-color: {{bg_partner_gray}} !important;
+}
+
+.bg-blue {
+    background-color: {{blue}} !important;
 }
 
 /* For pricing page, consider generalizing as you encounter more */
@@ -13159,6 +13171,15 @@ h1 {
     border-radius: 30px;
 }
 
+.mobile-form {
+    margin-top: -180px !important;
+}
+
+@media (max-width: 767px) {
+    .mobile-form {
+        margin-top: -100px !important;
+    }   
+}
 
 /* Pugspot Homepage */
 .hero-play {
@@ -13416,6 +13437,31 @@ h2.blog-hero-title {
     font-size: 18px
 }
 
+.resources-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
 .resources-card p {
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+}
+
+.resources-card img {
+    margin-bottom: 10px;
+}
+
+.accordion-menu .hs-menu-wrapper>ul>li>a{
+    text-transform: none;
+    margin-right: 0px;
+}
+
+/* Search Results */
+.hs-search-results__title {
+    font-weight: bold;
+}
+
+.hs-search-results__description{
     margin-bottom: 0px;
 }

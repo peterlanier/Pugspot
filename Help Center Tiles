@@ -5,13 +5,17 @@
                 {% for column in row %}
                     {% if column %}
                         <div class="content-card resources-card span4 eqh-item p20 pt30">
-                            <img src="{{ column.image.url }}" width="{{column.image.width}}" >
+                            <a href="resources/tag/{{column.path}}">
+                               <img src="{{ column.image.url }}" width="{{column.image.width}}" >
+                            </a>
                             <h4><a href="resources/tag/{{column.path}}">{{ column.tag }}</a></h4>
                             {{ column.description }}
                         </div>
                     {% elif loop.last %}
                     <div class="content-card resources-card span4 eqh-item p20 pt30">
-                        <img src="{{ column.image.url }}" width="{{column.image.width}}" >
+                        <a href="contact">
+                            <img src="https://www.storagepug.com/hubfs/ic-file.svg" >
+                        </a>
                         <h4><a href="contact">Contact the Pugs!</a></h4>
                         <p>If you can't find what you need or just want to chat, here is how you can reach us!</p>
                     </div>
