@@ -13465,3 +13465,10 @@ h2.blog-hero-title {
 .hs-search-results__description{
     margin-bottom: 0px;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+
+.menu-bar .hs-menu-wrapper > ul > li > a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600 !important;
+}
