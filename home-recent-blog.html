@@ -1,36 +1,37 @@
 {% set rec_posts = blog_recent_posts('default', 1) %} {% for rec_post in
-rec_posts %}
-<div class="row-fluid-wrapper">
-  <div class="row-fluid ">
-    <div class="content-section vcenter-inner">
-      <div class="centered vmiddle shift-col">
-        <div class="span6 widget-span widget-type-cell svg-stage">
-          <img
-            src="https://www.storagepug.com/hubfs/img-texture-blog-02.png"
-            class="svg-blog-1 svg-back svg-transform-y"
-            style="z-index:-1;"
-          />
-          <img
-            src="https://www.storagepug.com/hubfs/img-texture-blog.png"
-            class="svg-blog-2 svg-back svg-transform-y"
-            style="z-index:-1;"
-          />
-          <img
-            src="{{ rec_post.featured_image }}"
-            style="z-index:1;"
-            class="funyl-radius"
-          />
-        </div>
-        <div class="span6 sm-pl0 sm-mb50 sm-tc widget-span widget-type-cell">
-          <h2>{{ rec_post.name }}</h2>
-          <div>{{ rec_post.post_summary }}</div>
-          <a href="{{ rec_post.slug }}" style="font-size:18px;font-weight:bold;"
-            >CONTINUE READING<br/><img src="https://www.storagepug.com/hubfs/thick-arrow.png" style="margin-top:-23px;" />
-          </a>
+  rec_posts %}
+  <div class="row-fluid-wrapper">
+    <div class="row-fluid ">
+      <div class="content-section vcenter-inner sm-pb0 sm-pt60">
+        <div class="centered vmiddle shift-col">
+          <div class="span6 widget-span widget-type-cell svg-stage">
+            <img
+              src="https://www.storagepug.com/hubfs/img-texture-blog-02.png"
+              class="svg-blog-1 svg-back svg-transform-y"
+              style="z-index:-1;"
+            />
+            <img
+              src="https://www.storagepug.com/hubfs/img-texture-blog.png"
+              class="svg-blog-2 svg-back svg-transform-y"
+              style="z-index:-1;"
+            />
+            <img
+              src="{{ rec_post.featured_image }}"
+              style="z-index:1;"
+              class="funyl-radius sm-pb40"
+            />
+          </div>
+          <div class="span6 sm-pl0 sm-mb50 widget-span widget-type-cell sm-tl">
+            <h2>{{ rec_post.name }}</h2>
+            <div>{{ rec_post.post_summary }}</div>
+            <a href="{{ rec_post.slug }}" style="font-size:18px;font-weight:bold;" class="cta_button button color-1 empty"
+              >CONTINUE READING<br/>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-{% endfor %}
+  
+  {% endfor %}
+  
