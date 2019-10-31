@@ -7171,7 +7171,7 @@ html body .recaptchatable a:hover {
    ========================================================================== */
 
 .pricing-table-price {
-    padding: 30px 20px 0;
+    padding: 0px;
     color: {{ heading_color }};
     font-size: 2.8125rem;
     line-height: 1;
@@ -7206,7 +7206,7 @@ html body .recaptchatable a:hover {
    ========================================================================== */
 
 .pricing-table-details {
-    padding: 30px 20px;
+    padding: 50px 20px 45px;
     font-size: .9rem;
 }
 
@@ -13105,7 +13105,7 @@ h1 {
 }
 
 .shadow {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.05);
 }
 
 .shadow-light {
@@ -13466,9 +13466,66 @@ h2.blog-hero-title {
     margin-bottom: 0px;
 }
 
+/* Ana's changes */
+.hs-button:hover,
+.button:not(.no-animation):hover{
+    transform: none;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.05);
+}
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
 
 .menu-bar .hs-menu-wrapper > ul > li > a {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600 !important;
 }
+
+.footer-container-wrapper .link-hover-theme a:hover {
+    color: #ffa226 !important;
+}
+
+.scroll-to-top {
+    right: 100px;
+}
+
+.section-intro h2, h1 {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .content-card:hover{
+        box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.05);
+    }
+}
+
+.bbs-counter-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.blog-format{
+    font-size: 18px;
+}
+
+@media (max-width: 767px) { 
+    .section-intro h2 {
+        font-size: 24px;
+    }
+
+    .header-wrapper.header-overlap {
+        background: white;
+    }
+
+    .header-wrapper.header-overlap .fa.fa-bars {
+        color: black;
+    }
+
+    .scroll-to-top {
+        display: none;
+    }
+
+ }
+
+ .row-fluid-wrapper:focus {
+    outline: none;
+ }
