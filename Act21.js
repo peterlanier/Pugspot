@@ -9,15 +9,15 @@
 <script>
   //animation for body on homepage
   var motion = document.querySelector("#bmmotion");
-  var motionAnimation = bodymovin.loadAnimation({
-    container: motion,
-    renderer: "svg",
-    loop: false,
-    autoplay: false,
-    path: "https://www.storagepug.com/hubfs/AnimatedSVG/body-data.json"
-  });
-
   if (motion !== null) {
+    var motionAnimation = bodymovin.loadAnimation({
+      container: motion,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: "https://www.storagepug.com/hubfs/AnimatedSVG/body-data.json"
+    });
+
     motion.addEventListener("mouseenter", function() {
       motionAnimation.goToAndPlay(0);
     });
@@ -25,15 +25,15 @@
 
   //animation for logo (on sticky)
   var logo = document.querySelector("#bmlogo");
-  var logoAnimation = bodymovin.loadAnimation({
-    container: bmlogo,
-    renderer: "svg",
-    loop: false,
-    autoplay: false,
-    path: "https://www.storagepug.com/hubfs/AnimatedSVG/new-logo.json"
-  });
-
   if (logo !== null) {
+    var logoAnimation = bodymovin.loadAnimation({
+      container: bmlogo,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: "https://www.storagepug.com/hubfs/AnimatedSVG/new-logo.json"
+    });
+
     logo.addEventListener("mouseenter", function() {
       logoAnimation.goToAndPlay(0);
     });
@@ -41,15 +41,15 @@
 
   //animation for logo (on noninverted overlays)
   var bmlogoInv = document.querySelector("#bmlogoInv");
-  var invLogoAnimation = bodymovin.loadAnimation({
-    container: bmlogoInv,
-    renderer: "svg",
-    loop: false,
-    autoplay: false,
-    path: "https://www.storagepug.com/hubfs/AnimatedSVG/new-logo-inv.json"
-  });
-
   if (bmlogoInv !== null) {
+    var invLogoAnimation = bodymovin.loadAnimation({
+      container: bmlogoInv,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: "https://www.storagepug.com/hubfs/AnimatedSVG/new-logo-inv.json"
+    });
+
     bmlogoInv.addEventListener("mouseenter", function() {
       invLogoAnimation.goToAndPlay(0);
     });
