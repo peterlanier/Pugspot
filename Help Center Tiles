@@ -1,27 +1,115 @@
 <div class="row-fluid-wrapper blog-listing-row">
-    <div class="row-fluid">
-        {% for row in hubdb_table_rows(2011185)|batch(3, '') %}
-            <div class="row-fluid mb20 eqh-container">
-                {% for column in row %}
-                    {% if column %}
-                        <div class="content-card resources-card span4 eqh-item p20 pt30">
-                            <a href="resources/tag/{{column.path}}">
-                               <img src="{{ column.image.url }}" width="{{column.image.width}}" >
-                            </a>
-                            <h4><a href="resources/tag/{{column.path}}">{{ column.tag }}</a></h4>
-                            {{ column.description }}
-                        </div>
-                    {% elif loop.last %}
-                    <div class="content-card resources-card span4 eqh-item p20 pt30">
-                        <a href="contact">
-                            <img src="https://www.storagepug.com/hubfs/ic-file.svg" >
-                        </a>
-                        <h4><a href="contact">Contact the Pugs!</a></h4>
-                        <p>If you can't find what you need or just want to chat, here is how you can reach us!</p>
-                    </div>
-                    {% endif %}
-                {% endfor %}
+  <div class="row-fluid">
+    {% for row in hubdb_table_rows(2011185)|batch(3, '') %}
+    <div class="row-fluid mb20 eqh-container">
+      {% for column in row %} {% if column %}
+      <div class="content-card resources-card span4 eqh-item p20 pt30">
+        <img src="{{ column.image.url }}" width="{{ column.image.width }}" />
+
+        <h4>
+          {{ column.tag }}
+        </h4>
+        {{ column.description }}
+        <div class="row-fluid-wrapper row-depth-2 row-number-5 ">
+          <div class="row-fluid ">
+            <div
+              class="span12 widget-span widget-type-custom_widget content-card-link"
+              style=""
+              data-widget-type="custom_widget"
+              data-x="0"
+              data-w="12"
+            >
+              <div
+                id="hs_cos_wrapper_module_15705673340912208"
+                class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module"
+                style=""
+                data-hs-cos-general-type="widget"
+                data-hs-cos-type="module"
+              >
+                <div id="module_15705673340912208" class=" simple-link">
+                  <a href="resources/tag/{{ column.path }}" class="" title=""
+                    >link</a
+                  >
+                </div>
+                <style>
+                  .hs-inline-edit
+                    .content-card:hover
+                    .content-card-link
+                    .hs_cos_wrapper[data-hs-overrideable="true"]
+                    #module_15705673340912208
+                    a {
+                    position: relative !important;
+                    height: 40px;
+                    background-color: white;
+                    color: blue;
+                    font-size: 0.875rem;
+                    line-height: 2.8571;
+                    font-weight: bold;
+                    opacity: 1;
+                  }
+                </style>
+              </div>
             </div>
-        {% endfor %}
+            <!--end widget-span -->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end row-wrapper -->
+      </div>
+      {% elif loop.last %}
+      <div class="content-card resources-card span4 eqh-item p20 pt30">
+        <img src="https://www.storagepug.com/hubfs/ic-contact.svg" />
+        <h4>Contact the Pugs!</h4>
+        <p>
+          If you can't find what you need or just want to chat, here is how you
+          can reach us!
+        </p>
+        <div class="row-fluid-wrapper row-depth-2 row-number-5 ">
+          <div class="row-fluid ">
+            <div
+              class="span12 widget-span widget-type-custom_widget content-card-link"
+              style=""
+              data-widget-type="custom_widget"
+              data-x="0"
+              data-w="12"
+            >
+              <div
+                id="hs_cos_wrapper_module_15705673340912208"
+                class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module"
+                style=""
+                data-hs-cos-general-type="widget"
+                data-hs-cos-type="module"
+              >
+                <div id="module_15705673340912208" class=" simple-link">
+                  <a href="/contact" class="" title="">link</a>
+                </div>
+                <style>
+                  .hs-inline-edit
+                    .content-card:hover
+                    .content-card-link
+                    .hs_cos_wrapper[data-hs-overrideable="true"]
+                    #module_15705673340912208
+                    a {
+                    position: relative !important;
+                    height: 40px;
+                    background-color: white;
+                    color: blue;
+                    font-size: 0.875rem;
+                    line-height: 2.8571;
+                    font-weight: bold;
+                    opacity: 1;
+                  }
+                </style>
+              </div>
+            </div>
+            <!--end widget-span -->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end row-wrapper -->
+      </div>
+      {% endif %} {% endfor %}
     </div>
+    {% endfor %}
+  </div>
 </div>

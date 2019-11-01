@@ -68,4 +68,11 @@
       anim.loop = false;
     }
   }
+
+  //Form Styles
+  $(document).ready(function() {
+    var select = $('select.hs-input:not([type="radio"]):not([type="checkbox"])');
+    console.log(select);
+  });
+
 </script>

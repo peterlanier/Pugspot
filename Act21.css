@@ -13480,7 +13480,8 @@ h2.blog-hero-title {
     font-weight: 600 !important;
 }
 
-.footer-container-wrapper .link-hover-theme a:hover {
+.pugspot-footer .sub-menu li.active-branch a,
+.sub-menu a:hover {
     color: #ffa226 !important;
 }
 
@@ -13493,7 +13494,7 @@ h2.blog-hero-title {
 }
 
 @media (min-width: 768px) {
-    .content-card:hover{
+    .content-card{
         box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.05);
     }
 }
@@ -13507,9 +13508,17 @@ h2.blog-hero-title {
     font-size: 18px;
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
+    .section-intro h1 {
+        font-size: 30px;
+    }
+
     .section-intro h2 {
         font-size: 24px;
+    }
+
+    .section-intro p{
+        font-size: 18px;
     }
 
     .header-wrapper.header-overlap {
@@ -13524,8 +13533,83 @@ h2.blog-hero-title {
         display: none;
     }
 
+    .svg-features-1 img{
+        max-width: 50% !important;
+        height: auto;
+        top: -17px;
+        left: 22px;
+    }
+
+    .svg-attract-1 img{
+        max-width: 50% !important;
+        height: auto;
+        bottom: 32px;
+        right: -8px;
+    }
+
+    .svg-boost-1 img{
+        max-width: 50% !important;
+        height: auto;
+        top: -18px;
+        left: 10px;
+    }
+    
+    .svg-collect-1 img{
+        max-width: 50% !important;
+        height: auto;
+        top: -15px;
+        right: 25px;
+    }
+
+    .never-stack.careers h4{
+        font-size: 12px;
+    }
+
+    .careers .dig{
+        padding-bottom: 24px !important;
+    }
+    .careers .stewards{
+        padding-bottom: 64px !important;
+    }
+
+    .resource-card-long h2{
+        font-size: 18px;
+    }
+
+    .resource-card-long p{
+        font-size: 14px;
+    }
+
+    .resource-card-long img {
+        max-width: 50% !important;
+        height: auto;
+    }
+
+    .resource-card-long .vcenter-inner:not(.no-align-items){
+        align-items: flex-start;
+    }
+
  }
 
  .row-fluid-wrapper:focus {
     outline: none;
  }
+
+ .hs-input:not([type="radio"]):not([type="checkbox"]){
+     color: #202020;
+     font-size: 18px;
+     font-weight: 600;
+ }
+
+ select {
+    background-image:
+      linear-gradient(45deg, transparent 50%, #8647b3 50%),
+      linear-gradient(135deg, #8647b3 50%, transparent 50%) !important;
+    background-position:
+      calc(100% - 25px) calc(1em + 10px),
+      calc(100% - 15px) calc(1em + 10px)!important;
+    background-size:
+      10px 10px,
+      10px 10px !important;
+    background-repeat: no-repeat !important;
+  }
