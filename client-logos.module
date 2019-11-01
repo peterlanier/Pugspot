@@ -1,45 +1,37 @@
 <div class="bg-partner-gray">
-  <div class="centered">
-    <div class="all-inline tj md-tc">
-      {% for item in module.group %} {% if item.client_logo.src %} {% set
-      sizeAttrs = 'width="{{ item.client_logo.width }}" height="{{
-        item.client_logo.height
-      }}"' %} {% if item.client_logo.size_type == 'auto' %} {% set sizeAttrs =
-      'style="max-width: 100%; height: auto;"' %} {% elif
-      item.client_logo.size_type == 'auto_custom_max' %} {% set sizeAttrs =
-      'width="100%" height="auto" style="max-width:
-      {{ item.client_logo.max_width }}px; max-height:
-      {{ item.client_logo.max_height }}px"' %} {% endif %} {% set href =
-      item.link.url.href %} {% if item.link.url.type is equalto "EMAIL_ADDRESS"
-      %} {% set href = "mailto:" + href %} {% endif %}
+  <div class="centered md-stack" >
+    <div class="all-inline tj sm-tc">
+      {% for item in module.group %}
+      {% if item.client_logo.src %}
+      {% set sizeAttrs = 'width="{{ item.client_logo.width }}" height="{{ item.client_logo.height }}"' %}
+      {% if item.client_logo.size_type == 'auto' %}
+      {% set sizeAttrs ='style="max-width: 100%; height: auto;"' %}
+      {% elif item.client_logo.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ item.client_logo.max_width }}px; max-height: {{ item.client_logo.max_height }}px"' %}
+      {% endif %}
+      {% set href = item.link.url.href %}
+      {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
       <a
         href="{{ href }}"
-        {%
-        if
-        item.link.open_in_new_tab
-        %}target="_blank"
-        {%
-        endif
-        %}
-        {%
-        if
-        item.link.no_follow
-        %}rel="nofollow"
-        {%
-        endif
-        %}
+        class="client-logo"
+        {% if item.link.open_in_new_tab %}
+        target="_blank"
+        {% endif %}
+        {% if item.link.no_follow %}
+        rel="nofollow"
+        {% endif %}
       >
         <img
           src="{{ item.client_logo.src }}"
           alt="{{ item.client_logo.alt }}"
-          {{
-          sizeAttrs
-          }}
+          {{ sizeAttrs }}
           class="pt40"
         />
       </a>
-
-      {% endif %} {% endfor %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>

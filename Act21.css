@@ -13589,6 +13589,10 @@ h2.blog-hero-title {
         align-items: flex-start;
     }
 
+    .client-logo{
+        display: block;
+    }
+
  }
 
  .row-fluid-wrapper:focus {
