@@ -1,0 +1,7 @@
+{% set topic_text = "hs_path=" + topic %} {% for row in hubdb_table_rows(849316,
+topic_text) %}
+<div class="tag-text-wrapper mb-5">
+  <h1 class="tag-name">{{ row.hs_name }}</h1>
+  <p class="tag-description">{{ row.description }}</p>
+</div>
+{% endfor %}

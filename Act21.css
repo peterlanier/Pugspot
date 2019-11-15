@@ -40,7 +40,7 @@
 {% set text_font_family = "Open Sans, sans-serif" %}
 {% set text_font_size = "100%" %}
 {% set text_line_height = "1.7" %}
-{% set text_light_variant = "300" %}
+{% set text_light_variant = "400" %}
 {% set text_normal_variant = "500" %}
 {% set text_bold_variant = "700" %}
 {% set text_font_weight = text_normal_variant %}
@@ -50,7 +50,7 @@
 {% set heading_font_size = 0 %}
 {% set heading_light_variant = "300" %}
 {% set heading_normal_variant = "500" %}
-{% set heading_bold_variant = "700" %}
+{% set heading_bold_variant = "600" %}
 {% set heading_font_weight = heading_bold_variant %}
 
 {% set corners = "rounder" %}
@@ -156,7 +156,7 @@
 /* ==========================================================================
    Import
    ========================================================================== */
-
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap'); */
 /**
  * Do not add any CSS rule before @import, except CSS comments. All @import
  * rules should stay at the top. Add only secure link paths ('https://')
@@ -647,7 +647,7 @@ h6 {
 .section-intro h2,
 h1 {
     margin-bottom: .8em;
-    line-height: 1.1;
+    line-height: 1.3;
     letter-spacing: -.03em;
 }
 
@@ -1200,9 +1200,10 @@ label {
     padding-top: 0.125rem !important;
 }
 
-.hs-error-msgs label {
+.hs-error-msg {
     font-weight: inherit;
-    font-size: 0.6875rem;
+font-size: 14px !important;
+    color: #f4365c !important;
     line-height: 1.2;
     opacity: .8;
 }
@@ -1244,7 +1245,7 @@ label {
 }
 
 textarea {
-    height: 160px;
+    height: 160px !important;
     {% if corners == "rounder" %}
         border-radius: 10px !important;
     {% endif %}
@@ -1297,8 +1298,8 @@ textarea {
 /* Input placeholders
    ========================================================================== */
 
-input::placeholder {
-   color: inherit;
+input::placeholder, .hs-input::placeholder {
+/*    color: inherit; */
    opacity: 1;
 }
 
@@ -1924,7 +1925,7 @@ html[xmlns] .hs_cos_flex-slides {
 .hs_cos_flex-slider .superimpose .caption {
     color: white;
     font-size: 3rem;
-    line-height: 1.1;
+/*     line-height: 1.1; */
     position: absolute;
     padding: 1px 5%;
     width: 100%;
@@ -5726,7 +5727,7 @@ html body .recaptchatable a:hover {
 
 .section-intro p {
     font-size: 18px;
-    line-height: 1.5;
+
     font-weight: {{ text_light_variant }};
 }
 
@@ -5786,7 +5787,7 @@ html body .recaptchatable a:hover {
     border: 2px solid transparent;
     {{ radius(corners, '0', '6px', '60px') }}
     color: #fff !important;
-    font-size: 0.875rem;
+    font-size: 16px;
     line-height: 20px;
     font-weight: {{ text_bold_variant }};
     text-transform: {{ uppercase_emphasis }};
@@ -8658,7 +8659,7 @@ html body .recaptchatable a:hover {
 .hero-format h3 {
     margin-bottom: .35rem;
     font-size: {{ h1_font_size + h1_font_size * 41.66 / 100 }}rem;
-    line-height: 1.1;
+/*     line-height: 1.1; */
     letter-spacing: -.05em;
 }
 
@@ -10727,10 +10728,10 @@ a.popup-content a:focus {
     display: block;
     padding: 10px 20px;
     margin: 3px;
-    background-color: #fff;
+    background-color: {{ theme_color }};
     box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.15);
     {{ radius(corners, '0', '6px', '6px') }}
-    color: {{ theme_color }};
+    color: #fff;
     font-size: 0.875rem;
     line-height: 1.2857;
     font-weight: {{ text_bold_variant }};
@@ -10740,8 +10741,8 @@ a.popup-content a:focus {
 .list-type-buttons ul li a:hover,
 .list-type-buttons ul li a:active,
 .list-type-buttons ul li a.active {
-    background-color: {{ theme_color }};
-    color: #fff;
+    background-color: #fff;
+    color: {{ theme_color }};
 }
 
 .list-type-buttons.theme ul li a {
@@ -13138,7 +13139,7 @@ h1 {
 }
 
 .pugspot-footer .sub-menu {
-    font-weight: 600;
+    font-weight: 500;
     color: #ffffff;
     opacity: 0.8
 }
@@ -13163,7 +13164,11 @@ h1 {
 .pugspot-form form input::placeholder,
 .pugspot-form form label {
     font-size: 18px;
-    color: #202020
+}
+
+.pugspot-form form label {
+    color: #202020;
+    font-weight: 600;
 }
 
 .pugspot-form form .hs-button[type=submit] {
@@ -13302,7 +13307,7 @@ h1 {
 
 .feature-card p {
     font-size: 14px;
-    line-height: 1.2em;
+/*     line-height: 1.2em; */
     margin-bottom: 1em;
 }
 
@@ -13421,11 +13426,22 @@ h2.blog-hero-title {
 .resources-menu ul li.hs-menu-depth-1 > a {
     display: none;
 }
+.resources-menu ul li.hs-menu-depth-1 ul li {
+    line-height: 40px;
+  color: rgba(32, 32, 32, 0.5);
+}
+
+.resources-menu ul li.hs-menu-depth-1 ul li a {
+  color: rgba(32, 32, 32, 0.5);
+}
+.resources-menu ul li.hs-menu-depth-1 ul li.active a{
+  color: #8647b3;
+}
 
 .resource-card-long h2,
 .resource-card-long p {
     margin-bottom: 0px;
-    line-height: 24px;
+/*     line-height: 1.7; */
 }
 
 .resource-card-long h2 {
@@ -13444,8 +13460,8 @@ h2.blog-hero-title {
 
 .resources-card p {
     font-size: 14px;
-    line-height: 1.2em;
-    margin-bottom: 1em;
+    line-height: 1.7em;
+    margin-bottom: .5em;
 }
 
 .resources-card img {
@@ -13473,11 +13489,11 @@ h2.blog-hero-title {
     box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.05);
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+
 
 .menu-bar .hs-menu-wrapper > ul > li > a {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600 !important;
+/*     font-weight: 600 !important; */
 }
 
 .pugspot-footer .sub-menu li.active-branch a,
@@ -13617,3 +13633,36 @@ h2.blog-hero-title {
       10px 10px !important;
     background-repeat: no-repeat !important;
   }
+
+
+/** Richard Custom Styles **/
+
+.body-container > .row-fluid-wrapper.row-depth-1 > .row-fluid {
+  overflow-x: hidden;
+}
+
+@media (min-width: {{ media_sm + 1 }}px) {
+  .oversized-image {
+    min-width: 900px !important;
+  }
+  
+  .shift-col .oversized-image {
+    margin-left: calc(100% - 900px) !important
+  }
+}
+
+@media (max-width: {{ media_sm }}px) {
+  .oversized-image {
+    margin-top: 40px !important;
+    max-width: 100% !important;
+  }
+}
+
+  h1.tag-name{
+    background: {{purple}};
+    padding: 30px;
+    font-size: 42px;
+    color: white;
+    display: inline-block;
+  }
+  
