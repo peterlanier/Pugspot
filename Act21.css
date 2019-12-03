@@ -13658,11 +13658,14 @@ h2.blog-hero-title {
   }
 }
 
-  h1.tag-name{
-    background: {{purple}};
-    padding: 30px;
-    font-size: 42px;
-    color: white;
-    display: inline-block;
-  }
-  
+h1.tag-name{
+background: {{purple}};
+padding: 30px;
+font-size: 42px;
+color: white;
+display: inline-block;
+}
+
+div.blog-category-filters div.cell-wrapper span div div ul li[style="display: block;"] {
+    display: inline-block !important;
+}
